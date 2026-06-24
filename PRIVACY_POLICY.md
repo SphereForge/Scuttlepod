@@ -51,6 +51,17 @@ Scuttlepod allows you to link your personal Google Drive or Dropbox accounts so 
 
 ---
 
+## Disclaimer, Limitation of Liability & Software Provided "AS IS"
+
+Because Scuttlepod is a highly powerful security and data-destruction utility, you must understand your responsibilities as a user before using this application:
+
+*   **Forgotten PINs & Lockout:** Because your PINs are cryptographically hashed and stored strictly locally on your device, **I have absolutely no way to recover, reset, or bypass your Master PIN if you forget it.** If you lose your Master PIN, you will be permanently locked out of Scuttlepod and your restricted applications. I am not responsible or liable for any loss of access to your device or data.
+*   **Accidental Wipes & Data Loss:** Scuttlepod is designed to permanently and securely shred files upon your command (via the Panic Wipe PIN, Cloud Canary, or Notification triggers). If you configure your wipe targets incorrectly, or if you accidentally trigger a wipe, **your data will be permanently and unrecoverably destroyed.** I am not responsible or liable for any accidental loss of files, photos, database entries, or folder directories.
+*   **Cloud Content & Upload Responsibility:** Because Scuttlepod connects directly to your personal Google Drive or Dropbox accounts, you are solely responsible for the content you choose to back up. I have no access to, nor do I monitor, your uploaded files. You must ensure that your backed-up data complies with your cloud provider’s terms of service and all applicable local and international laws (including copyright and privacy laws). I am not responsible or liable for any legal actions, account suspensions, or compliance issues resulting from the files you choose to store in your cloud.
+*   **Software Provided "AS IS":** This application is provided "AS IS" and "AS AVAILABLE" without any warranties of any kind, either express or implied. While I have worked tirelessly to test Scuttlepod, eliminate bugs, and ensure maximum stability on physical devices, no software is completely free of errors. **Any remaining bugs are entirely unintentional.** Under no circumstances shall I, the developer, be held liable for any direct, indirect, incidental, special, or consequential damages (including, but not limited to, data loss, device lockouts, system crashes, or hardware issues) resulting from the use of, or the inability to use, this application.
+
+---
+
 ## Children's Privacy
 
 This app is intended for a general audience and is not directed to children under the age of 13 (or the relevant age in your jurisdiction). I do not collect, store, or solicit any personal information from children or anyone else, as the App processes all data and app-restriction rules strictly locally on the device.
