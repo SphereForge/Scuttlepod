@@ -1,6 +1,6 @@
 # Scuttlepod Privacy Policy
 
-**Effective Date:** June 23, 2026
+**Effective Date:** June 24, 2026
 
 I, the developer of Scuttlepod, have built this application (the "App") as a secure, personal device lock, parental control, and remote-wipe anti-theft utility. This Privacy Policy is here to tell you in plain English exactly how Scuttlepod protects your data.
 
