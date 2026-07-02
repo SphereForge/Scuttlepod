@@ -1,9 +1,8 @@
 # Scuttlepod Privacy Policy
 
-**Effective Date:** June 26, 2026
+**Effective Date:** July 2, 2026
 
 I, the developer of Scuttlepod, have built this application (the "App") as a secure, personal device lock, parental control, and remote-wipe anti-theft utility. This Privacy Policy is here to tell you in plain English exactly how Scuttlepod protects your data.
-
 
 ## Scuttlepod Privacy Philosophy is simple:
 
@@ -18,15 +17,15 @@ To protect your device, Scuttlepod needs you to enable several permissions. Here
 
 ### Required Permissions:
 
-*   **Accessibility Service:** Used strictly to protect your device by detecting when a blocked/restricted app is opened so the lock overlay can display, and to block guests from going into settings to force-stop or uninstall Scuttlepod. This runs completely offline on your device.
+*   **Accessibility Service:** Used strictly to protect your device by detecting when a blocked/restricted app is opened so the lock overlay can display, and to prevent unauthorized users from going into settings to force-stop or uninstall Scuttlepod. **This service processes all data locally and runs completely offline on your device. I do not collect, monitor, store, or transmit any user interactions, keystrokes, on-screen text, or accessibility data processed by this service.**
 *   **Display Over Other Apps (System Alert Window):** This is the permission that physically allows Scuttlepod to draw its security lock screen over your home screen and restricted apps.
 *   **Battery Optimization (Unrestricted):** Must be set to "Unrestricted" so that Android does not put Scuttlepod to sleep in the background, which would leave your locked apps unprotected.
 
 ### Optional Permissions:
 
-*   **Camera Access:** Used strictly to snap silent photos with the front and back cameras if an incorrect PIN is entered on your lock screen. These photos are saved directly inside Scuttlepod’s private, sandboxed internal storage, making them completely invisible to all other applications on your device. Furthermore, they are stored on your device’s hardware-encrypted partition, which is only decrypted when you unlock your device.
+*   **Camera Access:** Used strictly to capture photos with the front and back cameras if an incorrect PIN is entered on your lock screen. These photos are saved directly inside Scuttlepod’s private, sandboxed internal storage, making them completely invisible to all other applications on your device. Furthermore, they are stored on your device’s hardware-encrypted partition, which is only decrypted when you unlock your device. *(Please note: Due to Android's built-in system privacy controls, a green camera indicator or icon may momentarily appear on your screen when a photo is captured).*
 *   **Notifications:** Used to send you system alerts if critical security features are accidentally turned off or revoked.
-*   **Notification Access (Notification Interceptor):** Allows Scuttlepod to scan incoming notification headers locally on your device for your custom, secret remote-trigger keyword.
+*   **Notification Access (Notification Interceptor):** Allows Scuttlepod to scan incoming notification headers locally on your device for your custom, secret remote-trigger keyword. **This scanning is performed entirely on-device and offline. I do not collect, read, store, or transmit your notifications, messages, or sender information.**
 
 ---
 
