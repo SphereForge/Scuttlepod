@@ -17,13 +17,13 @@ ScuttlePod operates on top of your native Android lock screen, acting as a secur
 
 ### 🔥 Under the Hood: Secure Wipe Engine
 Standard file deletions only unlink the file, leaving the raw blocks recoverable on storage. ScuttlePod implements a multi-step secure erasure pipeline:
-1. **Byte-Level Overwriting:** Files are opened in write-truncate (wt) mode and overwritten chunk by chunk with cryptographically secure random bytes matching the exact size of the file.
+1. **Byte-Level Overwriting:** Files are opened in write-truncate (`wt`) mode and overwritten chunk by chunk with cryptographically secure random bytes matching the exact size of the file.
 2. **Metadata Scrambling & Deletion:** Files and target user-created directories are renamed to randomized 6-digit numbers to erase original filenames before the final deletion is executed.
-3. **Root Folder Protections:** To prevent system instability, ScuttlePod cannot rename or delete root volumes or system directories (such as the primary storage root, Android, or Download folders). However, it will securely overwrite and delete all targeted user subfolders and files nested inside them.
+3. **Root Folder Protections:** To prevent system instability, ScuttlePod cannot rename or delete root volumes or system directories (such as the primary storage root, `Android`, or `Download` folders). However, it will securely overwrite and delete all targeted user subfolders and files nested inside them.
 
 ### 📲 Remote Emergency Triggers
 * **Notification Interceptor:** Executes a remote backup or wipe when a custom secret keyword is detected in an incoming notification. (Note: Your targeted messaging app must have its system notifications enabled for ScuttlePod to intercept the keyword). If the device is offline or the connection drops mid-upload, ScuttlePod immediately aborts the backup and triggers the secure local wipe.
-* **Cloud Canary:** Automatically generates the file [SCUTTLEPOD_CANARY] - TRASH TO WIPE PHONE.txt in your cloud’s directory. If this file is moved to the trash or deleted from another device, ScuttlePod detects its absence during its periodic check, starts the backup, and wipes your selected folders.
+* **Cloud Canary:** Automatically generates the file `[SCUTTLEPOD_CANARY] - TRASH TO WIPE PHONE.txt` in your cloud’s directory. If this file is moved to the trash or deleted from another device, ScuttlePod detects its absence during its periodic check, starts the backup, and wipes your selected folders.
 * **Dead Man’s Switch:** If the device is not unlocked for a set period (7, 14, 30, or 90 days), ScuttlePod safely uploads your selected folders to the cloud, then permanently disables the trigger. It pings Google’s UTC servers directly to find the accurate date and time, preventing accidental backups caused by local system clock drift.
 
 ### 📸 Intruder Logs
@@ -36,5 +36,5 @@ When an incorrect PIN is entered on a restricted app or the overlay, ScuttlePod 
 
 * **Zero Backend Servers:** ScuttlePod does not run any proprietary backend databases or servers. I have absolutely no access to your files, encryption keys, or credentials.
 * **Bring Your Own Cloud (BYOC):** File transfers stream directly from your device using secure OAuth connections to your personal Google Drive or Dropbox account.
-* **PIN Hashing:** PINs are never stored in plain text. They are hashed using PBKDF2WithHmacSHA256 with 10,000 iterations and a cryptographically secure 16-byte random salt.
+* **PIN Hashing:** PINs are never stored in plain text. They are hashed using `PBKDF2WithHmacSHA256` with 10,000 iterations and a cryptographically secure 16-byte random salt.
 * **Encrypted Sandbox:** Intruder logs, captured photos, and app settings are stored strictly inside ScuttlePod’s private, sandboxed internal storage, hidden from the system photo gallery and protected by Android’s hardware-level file-based encryption (FBE).
