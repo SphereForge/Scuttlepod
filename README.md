@@ -1,4 +1,11 @@
-# ScuttlePod
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/fbff3ce9-2779-4f6f-8cf0-5c87f9b4d2db" alt="ScuttlePod Logo" width="96" height="96" />
+  <h1>ScuttlePod</h1>
+
+  <a href="https://play.google.com/store/apps/details?id=com.sphereforge.scuttlepod">
+    <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="200"/>
+  </a>
+</div>
 
 ScuttlePod is a secure app lock overlay and anti-theft data rescue utility for Android. It is designed to protect selected folders and restrict app access under scenarios of physical coercion, device snatching, or duress.
 
@@ -12,7 +19,7 @@ Unlike standard lock screens or passive app lockers, ScuttlePod provides dynamic
 ScuttlePod operates on top of your native Android lock screen, acting as a security overlay. It uses four specialized PINs to trigger different behaviors:
 * **Master PIN:** Unlocks the overlay and grants access to ScuttlePod configurations.
 * **Guest PIN:** Keeps restricted apps protected behind an overlay. It allows basic device usage but immediately blocks access if a restricted app is launched.
-* **Panic-Backup PIN (Delay Tactic):** Mimics a successful unlock sequence to buy you time under pressure. While appearing unlocked, ScuttlePod silently uploads your selected folders to your cloud account in the background. The moment an intruder attempts to tap a restricted app, the lock screen drops, forcing a decision: unlock or wipe.
+* **Panic-Backup PIN (Delay Tactic):** Mimics a successful unlock into Guest Mode to buy you time under pressure. While appearing unlocked in Guest Mode, ScuttlePod silently uploads your selected folders to your cloud account in the background. The moment an intruder attempts to open a restricted app, the lock screen drops, forcing a decision: unlock or wipe.
 * **Panic-Wipe PIN:** Triggers a customizable countdown (10–60 seconds). Only the Master PIN can abort it. This countdown is persistent and survives device reboots.
 
 ### 🔥 Under the Hood: Secure Wipe Engine
@@ -38,3 +45,11 @@ When an incorrect PIN is entered on a restricted app or the overlay, ScuttlePod 
 * **Bring Your Own Cloud (BYOC):** File transfers stream directly from your device using secure OAuth connections to your personal Google Drive or Dropbox account.
 * **PIN Hashing:** PINs are never stored in plain text. They are hashed using `PBKDF2WithHmacSHA256` with 10,000 iterations and a cryptographically secure 16-byte random salt.
 * **Encrypted Sandbox:** Intruder logs, captured photos, and app settings are stored strictly inside ScuttlePod’s private, sandboxed internal storage, hidden from the system photo gallery and protected by Android’s hardware-level file-based encryption (FBE).
+
+---
+
+## 🔗 Links & Support
+* 🌐 **[Official Website](https://scuttlepod.com/)**
+* 📱 **[Download on Google Play](https://play.google.com/store/apps/details?id=com.sphereforge.scuttlepod)**
+* 🐞 **[Report an Issue](https://github.com/SphereForge/Scuttlepod/issues)**
+* 📄 **[Privacy Policy](https://scuttlepod.com/scuttlepod-privacy.html)** ([GitHub Mirror](https://github.com/SphereForge/Scuttlepod/blob/main/PRIVACY_POLICY.md))
