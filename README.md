@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/fbff3ce9-2779-4f6f-8cf0-5c87f9b4d2db" alt="ScuttlePod Logo" width="96" height="96" />
+  <img src="https://github.com/user-attachments/assets/f3cd2dbf-92d0-4984-a21e-16878dcbbab1" alt="ScuttlePod Logo" width="96" height="96" />
   <h1>ScuttlePod</h1>
 
   <a href="https://play.google.com/store/apps/details?id=com.sphereforge.scuttlepod">
@@ -20,7 +20,13 @@ ScuttlePod operates on top of your native Android lock screen, acting as a secur
 * **Master PIN:** Unlocks the overlay and grants access to ScuttlePod configurations.
 * **Guest PIN:** Keeps restricted apps protected behind an overlay. It allows basic device usage but immediately blocks access if a restricted app is launched.
 * **Panic-Backup PIN (Delay Tactic):** Mimics a successful unlock into Guest Mode to buy you time under pressure. While appearing unlocked in Guest Mode, ScuttlePod silently uploads your selected folders to your cloud account in the background. The moment an intruder attempts to open a restricted app, the lock screen drops, forcing a decision: unlock or wipe.
-* **Panic-Wipe PIN:** Triggers a customizable countdown (10–60 seconds). Only the Master PIN can abort it. This countdown is persistent and survives device reboots.
+* **Panic-Wipe PIN:** Triggers a customizable countdown (10–60 seconds). Only the Master PIN can abort it. This countdown is persistent and survives device reboots. Includes an optional **Silent Mode** that disables the alarm sound and red warning screen in favor of a discreet dot countdown and 2 short vibrations.
+
+### 🛡️ Lock Screen Customization & Hardware Protections
+* **Custom Rotating Wallpapers:** Add up to 7 custom lock screen wallpapers with individual crop/zoom and automatic 24-hour rotation. Images are EXIF-corrected, capped to screen resolution (up to 2560px), and stored strictly inside ScuttlePod's private app storage.
+* **Master PIN Setup Safety Net:** Displays a discreet one-time 5-second Hold-to-Reset option on the lock screen right after creating a new Master PIN, permanently hiding itself after your first successful Master PIN unlock.
+* **Relock on SIM Removal:** Opt-in toggle that immediately locks the device if an active SIM card is ejected. 
+* **Anti-Uninstall & Capture Protection:** Uses Accessibility protections to prevent unauthorized uninstalls and blocks screenshots and screen recording inside ScuttlePod.
 
 ### 🔥 Under the Hood: Secure Wipe Engine
 Standard file deletions only unlink the file, leaving the raw blocks recoverable on storage. ScuttlePod implements a multi-step secure erasure pipeline:
